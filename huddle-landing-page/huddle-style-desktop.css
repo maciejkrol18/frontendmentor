@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* CSS RESET */
+
+:root {
+    /* Colors */
+    --clr-violet: hsl(257, 40%, 49%);
+    --clr-softmagenta: hsl(300, 69%, 71%);
+    /* Fonts */
+    --fnt-main: 'Poppins', sans-serif;
+    --fnt-secondary: 'Open Sans', sans-serif;
+    /* Font weights */
+    --wght-regular: 400;
+    --wght-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/* STYLING */
+
+body {
+    background-color: var(--clr-violet);
+    background-image: url('./images/bg-desktop.svg');
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+.desktop-br {
+    display: inline;
+}
+
+.mobile-br {
+    display: none;
+}
+
+
+.main-flex-container {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+}
+
+.primary-box {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-height: 100%;
+}
+
+.page-header {
+    width: 100%;
+    min-height: 20%;
+    padding: 3rem;
+}
+
+.graphics-container {
+    width: 100%;
+    min-height: 100%;
+    padding-left: 3rem;
+}
+
+.graphics-container img {
+    width: 90%;
+}
+
+.secondary-box {
+    width: 40%;
+    min-height: 100%;
+    padding-top: 2rem;
+}
+
+.content-box {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondary-box-header {
+    font-family: var(--fnt-main);
+    color: white;
+    font-size: 3em;
+    margin-bottom: 1.5rem;
+}
+
+.secondary-box-paragraph {
+    font-family: var(--fnt-secondary);
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 1.5rem;
+}
+
+.register-btn {
+    font-family: var(--fnt-secondary);
+    font-size: 1.125em;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    color: var(--clr-violet);
+    padding: .5em;
+    width: 200px;
+    height: 3.5rem;
+    -webkit-box-shadow: 6px 9px 10px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 9px 10px -8px rgba(0,0,0,0.75);
+    box-shadow: 6px 9px 10px -8px rgba(0,0,0,0.75);
+}
+
+.register-btn:hover {
+    background-color: var(--clr-softmagenta);
+    color: white;
+    cursor: pointer;
+    -webkit-box-shadow: 13px 12px 33px -8px rgba(0,0,0,0.64);
+    -moz-box-shadow: 13px 12px 33px -8px rgba(0,0,0,0.64);
+    box-shadow: 13px 12px 33px -8px rgba(0,0,0,0.64);
+}
+
+.secondary-box-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 90%;
+    margin-top: 6.5rem;
+}
+
+div[class*='footer-icon'],div[class^='footer-icon'] {
+    width: 32px;
+    height: 32px;
+    outline: 1px solid white;
+    border-radius: 30px;
+    padding: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div[class*='footer-icon']:hover,div[class^='footer-icon']:hover {
+    outline: 1px solid var(--clr-softmagenta);
+}
+
+.footer-icon-fb {
+    background-image: url(./images/facebook-icon-normal.png);
+}
+
+    .footer-icon-fb:hover {
+        background-image: url(./images/facebook-icon-active.png);
+    }
+
+.footer-icon-twt {
+    background-image: url(./images/twitter-icon-normal.png);
+}
+
+    .footer-icon-twt:hover {
+        background-image: url(./images/twitter-icon-active.png);
+    }
+
+.footer-icon-insta {
+    background-image: url(./images/instagram-icon-normal.png);
+}
+
+    .footer-icon-insta:hover {
+        background-image: url(./images/instagram-icon-active.png);
+    }

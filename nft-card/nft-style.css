@@ -1,0 +1,144 @@
+body {
+    font-family: Outfit;
+    margin: 0
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.a-attribution {
+    color:hsl(215, 51%, 70%);
+}
+
+.attribution {
+    margin-top: 2rem;
+    width: 25vw;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.webpage-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-container {
+    border-radius: 20px;
+    padding: 1em;
+    width: 16%;
+    min-height: 10%;
+    background-color: hsl(216, 50%, 16%);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.image-container {
+    width: 95%;
+    margin-top: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-logo {
+    border-radius: 10px;
+}
+
+.item-header {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    margin-bottom: 0;
+    color: white;
+}
+
+.item-title:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.description {
+    margin-bottom: 0;
+    font-size: 1.125em;
+    color: hsl(215, 51%, 70%);
+}
+
+.item-meta-container {
+    width: 95%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-price {
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-timeleft {
+    width: 50%;
+    align-items: center;
+    justify-content: right;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-price {
+    margin-left: 0.5rem;
+    color: hsl(178, 100%, 50%);
+}
+
+.item-timeleft {
+    margin-left: 0.5rem;
+    color: hsl(215, 51%, 70%);
+}
+
+.item-creator-container {
+    border-top: 1px solid hsl(215, 32%, 27%);
+    padding-top: 1rem;
+    width: 95%;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.image-avatar {
+    margin-right: 0.5rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+}
+
+.item-creator-name {
+    margin: 0;
+    font-size: 1.125em;
+    color: hsl(215, 51%, 70%);
+}
+
+.item-creator-name-highlight {
+    color: hsl(0, 0%, 100%)
+}
+
+.item-creator-name-highlight:hover {
+    color: hsl(178, 100%, 50%);
+}

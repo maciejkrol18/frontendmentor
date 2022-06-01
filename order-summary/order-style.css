@@ -1,0 +1,191 @@
+/* === FONT IMPORT === */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* === HTML TAGS === */
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(225, 100%, 94%);
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-size: 100% 40%;
+    background-repeat: no-repeat;
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+      background-image: url('./images/pattern-background-mobile.svg')
+    }
+  }
+
+/* === TEXT CLASSES === */
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.a-cancel {
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.a-change {
+    color:hsl(245, 75%, 61%);
+    font-size: 0.938em;
+    font-weight: 700;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 1.8em;
+}
+
+/* === HOVER STATES === */
+
+.a-cancel:hover {
+    text-decoration: underline;
+}
+
+.card-payment:hover {
+    cursor: pointer;
+}
+
+/* SPANS */
+
+.card-meta-title-text { /* SPAN */
+    font-weight: 600;
+    color: hsl(223, 47%, 23%);
+}
+
+.card-meta-title-price { /* SPAN */
+    color: hsl(224, 23%, 55%);
+}
+
+/* === MAIN FLEXBOX CONTAINER === */
+
+.webpage-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === DIVS === */
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    width: 27rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-banner {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-image: url('./images/illustration-hero.svg');
+    background-size: contain;
+    width: 27rem;
+    height: 12.7rem;
+    display: flex;
+}
+
+.card-title {
+    margin-top: 1rem;
+    color: hsl(223, 47%, 23%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-message {
+    color: hsl(224, 23%, 55%);
+    width: 21.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-meta {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    color: white;
+    width: 21.25rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-meta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card-meta-option {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.card-payment {
+    background-color: hsl(245, 75%, 52%);
+    box-shadow: 0 4px 2px -2px hs;
+    font-weight: 700;
+    color: white;
+    border-radius: 0.5rem;
+    width: 21.25rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-cancel-payment {
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 21.25rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === ATTRIBUTION === */
+.attribution {
+    font-size: 0.8em;
+    width: 31.25rem;
+    margin-top: 0.5rem;
+    color: hsl(223, 47%, 23%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.a-attribution {
+    color:hsl(224, 23%, 55%);
+    text-decoration: none;
+}
