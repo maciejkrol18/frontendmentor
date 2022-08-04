@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="stats-style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Stats preview card component</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Stats Preview Card</title>
 </head>
 <body>
-    <main class="webpage-container">    
-    </main>
+    <div class="root">
+        <main class="card">
+            <div class="col-image">
+                <div class="col-image-overlay-one"></div>
+                <div class="col-image-overlay-two"></div>
+            </div>
+            
+            <div class="col col-content">
+                <h1>Get <span class="accent-text">insights</span> that help your business grow</h1>
+
+                <p class="lead-text"> 
+                    Discover the benefits of data analytics and make better decisions regarding 
+                    revenue, customer experience, and overall efficiency
+                </p>
+
+                <div class="stats-container">
+                    <div class="stat">
+                        <h3>10k+</h3>
+                        <p>Companies</p>
+                    </div>
+                    <div class="stat">
+                        <h3>314</h3>
+                        <p>Templates</p>
+                    </div>
+                    <div class="stat">
+                        <h3>12M+</h3>
+                        <p>Queries</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
