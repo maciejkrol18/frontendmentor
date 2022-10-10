@@ -1,0 +1,93 @@
+/* ===============
+VARIABLES
+================== */
+:root {
+    --clr-strong-cyan: hsl(172, 67%, 45%);
+    --clr-very-dark-cyan: hsl(183, 100%, 15%);
+    --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --clr-grayish-cyan: hsl(184, 14%, 56%);
+    --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+    --clr-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+/* ===============
+GENERAL
+================== */
+
+body {
+    background-color: var(--clr-light-grayish-cyan);
+    font-family: 'Space Mono', sans-serif;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===============
+TYPOGRAPHY
+================== */
+
+.hero-title {
+    color: var(--clr-very-dark-cyan);
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    font-size: 1.75rem;
+    padding: 1.5rem 0;
+}
+
+/* ===============
+LAYOUT
+================== */
+
+input[type=number] {
+  appearance: textfield;
+}
+
+input,
+label {
+    padding: 0;
+    margin: 0;
+}
+
+.form {
+    background-color: var(--clr-white);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 2rem;
+    min-height: 100%;
+}
+
+.percentage-inputs-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.tip-percentage-label,
+.custom-percentage-input {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 34px;
+}
+
+.tip-percentage-label {
+    cursor: pointer;
+}
+
+.tip-percentage-input {
+    display: none;
+}
+
+.tip-percentage-label {
+    background-color: var(--clr-very-dark-cyan);
+    color: var(--clr-white);
+    padding: .3em 1rem;
+}
+
+/* ===============
+MEDIA QUERIES
+================== */
