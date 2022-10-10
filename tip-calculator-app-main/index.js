@@ -53,7 +53,12 @@ function renderResult() {
     const tipPerPerson = Number(((billAmount * tipPercentage) / numberOfPeople).toFixed(2));
     const tipTotal = Number(((billAmount / numberOfPeople) + tipPerPerson).toFixed(2));
 
-    tipPerPersonResultEl.textContent = tipPerPerson;
-    tipTotalResultEl.textContent = tipTotal;
+    if (tipPerPerson === NaN || tipPerPerson === Infinity || tipTotal === NaN || tipTotal === Infinity) {
+        tipPerPersonResultEl.textContent = `...`;
+        tipTotalResultEl.textContent = `...`;
+    } else {
+        tipPerPersonResultEl.textContent = tipPerPerson;
+        tipTotalResultEl.textContent = tipTotal;
+    }
 
 }
