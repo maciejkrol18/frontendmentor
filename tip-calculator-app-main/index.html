@@ -18,7 +18,9 @@
         <main class="form">
             <div class="form-row">
                 <p class="input-label">Bill</p>
-                <input type="number" name="bill-amount" id="bill-amount" class="app-number-input bill-amount-input">
+                <input 
+                type="number" name="bill-amount" id="bill-amount" class="app-number-input bill-amount-input"
+                pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;">
             </div>
 
             <div class="form-row">
@@ -61,28 +63,30 @@
 
             <div class="form-row">
                 <p class="input-label">Number of people</p>
-                <input type="number" name="number-of-people" id="number-of-people" class="app-number-input number-of-people-input">
+                <input 
+                type="number" name="number-of-people" id="number-of-people" class="app-number-input number-of-people-input"
+                pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==15) return false;" data-invalid="false">
             </div>
 
             <div class="results-container">
-                <div class="tip-per-person-container">
+                <div class="results-container-inner-wrapper">
                     <div>
-                        Tip Amount<br>
-                        /person
+                        <h2>Tip amount</h2>
+                        <span>/ person</span>
                     </div>
 
-                    <div>
+                    <div class="result-span-wrapper">
                         <span class="tip-per-person-result">...</span>
                     </div>
                 </div>
 
-                <div class="tip-total-container">
+                <div class="results-container-inner-wrapper">
                     <div>
-                        Total<br>
-                        /person
+                        <h2>Total</h2>
+                        <span>/ person</span>
                     </div>
 
-                    <div>
+                    <div class="result-span-wrapper">
                         <span class="tip-total-result">...</span>
                     </div>
                 </div>
