@@ -71,8 +71,8 @@ function renderResult() {
     // const tipTotal = Number((tipPerPerson * numberOfPeople).toFixed(2))
 
     if ( billAmount === 0 || tipPercentage === 0 || numberOfPeople === 0) {
-        tipPerPersonResultEl.textContent = `...`;
-        tipTotalResultEl.textContent = `...`;
+        tipPerPersonResultEl.textContent = `$0.00`;
+        tipTotalResultEl.textContent = `$0.00`;
     } else {
         tipPerPersonResultEl.textContent = `$${tipPerPerson}`;
         tipTotalResultEl.textContent = `$${tipTotal}`;

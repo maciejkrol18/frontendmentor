@@ -20,9 +20,9 @@
 
         <div class="form-column">
             <div class="form-row">
-                <p class="input-label">Bill</p>
+                <label class="input-label" for="bill-amount">Bill</label>
                 <input 
-                type="number" name="bill-amount" id="bill-amount" class="app-number-input bill-amount-input"
+                type="text" name="bill-amount" id="bill-amount" class="app-number-input bill-amount-input"
                 pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;">
             </div>
 
@@ -58,16 +58,16 @@
                     <div>
                         <!-- https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-number-in-chrome -->
                         <input 
-                        type="number" name="tip-percentage" placeholder="Custom" id="custom-percent" class="custom-percentage-input" 
+                        type="text" name="tip-percentage" placeholder="Custom" id="custom-percent" class="custom-percentage-input" 
                         pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
                     </div>
                 </div>
             </div>
 
             <div class="form-row">
-                <p class="input-label">Number of people</p>
+                <label class="input-label" for="number-of-people">Number of people</label>
                 <input 
-                type="number" name="number-of-people" id="number-of-people" class="app-number-input number-of-people-input"
+                type="text" name="number-of-people" id="number-of-people" class="app-number-input number-of-people-input"
                 pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==15) return false;" data-invalid="false" oninput="validateInput(this)">
             </div>
         </div>
@@ -82,7 +82,7 @@
                         </div>
     
                         <div class="result-span-wrapper">
-                            <span class="tip-per-person-result">...</span>
+                            <span class="tip-per-person-result">$0.00</span>
                         </div>
                     </div>
     
@@ -93,7 +93,7 @@
                         </div>
     
                         <div class="result-span-wrapper">
-                            <span class="tip-total-result">...</span>
+                            <span class="tip-total-result">$0.00</span>
                         </div>
                     </div>
                 </div>
