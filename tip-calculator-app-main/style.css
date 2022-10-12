@@ -227,7 +227,7 @@ MEDIA QUERIES
     }
 
     .hero-title {
-        font-size: 1.8rem;
+        padding-bottom: 4rem;
     }
 
     .form {
