@@ -16,6 +16,8 @@
         <h1 class="hero-title">Spli<br>tter</h1>
 
         <main class="form">
+
+        <div class="form-column">
             <div class="form-row">
                 <p class="input-label">Bill</p>
                 <input 
@@ -65,34 +67,39 @@
                 <p class="input-label">Number of people</p>
                 <input 
                 type="number" name="number-of-people" id="number-of-people" class="app-number-input number-of-people-input"
-                pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==15) return false;" data-invalid="false">
+                pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==15) return false;" data-invalid="false" oninput="validateInput(this)">
             </div>
+        </div>
 
+        <div class="form-column">
             <div class="results-container">
-                <div class="results-container-inner-wrapper">
-                    <div>
-                        <h2>Tip amount</h2>
-                        <span>/ person</span>
+                <div>
+                    <div class="results-container-inner-wrapper">
+                        <div>
+                            <h2>Tip amount</h2>
+                            <span>/ person</span>
+                        </div>
+    
+                        <div class="result-span-wrapper">
+                            <span class="tip-per-person-result">...</span>
+                        </div>
                     </div>
-
-                    <div class="result-span-wrapper">
-                        <span class="tip-per-person-result">...</span>
-                    </div>
-                </div>
-
-                <div class="results-container-inner-wrapper">
-                    <div>
-                        <h2>Total</h2>
-                        <span>/ person</span>
-                    </div>
-
-                    <div class="result-span-wrapper">
-                        <span class="tip-total-result">...</span>
+    
+                    <div class="results-container-inner-wrapper">
+                        <div>
+                            <h2>Total</h2>
+                            <span>/ person</span>
+                        </div>
+    
+                        <div class="result-span-wrapper">
+                            <span class="tip-total-result">...</span>
+                        </div>
                     </div>
                 </div>
 
                 <button class="reset-btn">Reset</button>
             </div>
+        </div>
 
         </main>
     </div>

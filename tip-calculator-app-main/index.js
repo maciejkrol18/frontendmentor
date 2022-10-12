@@ -18,11 +18,8 @@ function getCheckedTipPercentage() {
     }
 }
 
-document.addEventListener('keydown', renderResult)
+document.querySelector('.form').addEventListener('keyup', renderResult)
 
-// billAmountInput.addEventListener('keydown', renderResult);
-// numberOfPeopleInput.addEventListener('keydown', checkIfNumberOfPeopleInvalid);
-// customPercentageInput.addEventListener('keydown', renderResult);
 customPercentageInput.addEventListener('keydown', resetPercentageLabelsColor);
 
 document.querySelectorAll('.tip-percentage-input').forEach((e) => {
@@ -47,18 +44,17 @@ function resetPercentageLabelsColor() {
     })
 }
 
-// function checkIfNumberOfPeopleInvalid() {
-//     if (numberOfPeopleInput.value === 0 || numberOfPeopleInput.value === "") {
-//         numberOfPeopleInput.style.outline = "1px solid red"
-//         console.log('invalid')
-//     } else {
-//         numberOfPeopleInput.style.outline = "5px solid var(--clr-strong-cyan)"
-//     }
-// }
+function validateInput(e) {
+    if (e.value === "0" || e.value === "") {
+        e.dataset.invalid = "true"
+    } else {
+        e.dataset.invalid = "false"
+    }
+}
 
 function renderResult() {
 
-    document.querySelector('.tip-percentage-input:checked').style.backgroundColor = "var(--clr-strong-cyan) !important"
+    document.querySelector('.tip-percentage-input:checked').style.backgroundColor = "var(--clr-strong-cyan)"
 
     const billAmount = Number(billAmountInput.value);
     const tipPercentage = Number(getCheckedTipPercentage());
@@ -72,10 +68,9 @@ function renderResult() {
 
     const tipPerPerson = Number(((billAmount * tipPercentage) / numberOfPeople).toFixed(2));
     const tipTotal = Number(((billAmount / numberOfPeople) + tipPerPerson).toFixed(2));
+    // const tipTotal = Number((tipPerPerson * numberOfPeople).toFixed(2))
 
-    if (
-        billAmount === 0 || tipPercentage === 0 || numberOfPeople === 0
-        ) {
+    if ( billAmount === 0 || tipPercentage === 0 || numberOfPeople === 0) {
         tipPerPersonResultEl.textContent = `...`;
         tipTotalResultEl.textContent = `...`;
     } else {
@@ -84,8 +79,13 @@ function renderResult() {
     }
 }
 
-resetBtn.addEventListener('click', () => {
+resetBtn.addEventListener('click', resetForm)
+
+function resetForm() {
     billAmountInput.value = 0;
     numberOfPeopleInput.value = 0;
     renderResult();
-})
+}
+
+resetForm();
+validateInput(numberOfPeopleInput);
