@@ -220,7 +220,7 @@ input:focus {
 MEDIA QUERIES
 ================== */
 
-@media (min-width: 1450px) {
+@media (min-width: 1100px) {
 
     .root {
         justify-content: center;
