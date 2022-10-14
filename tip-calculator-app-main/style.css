@@ -101,10 +101,6 @@ LAYOUT
 }
 
 /* FORM ITEMS */
-
-/* input[type=number] {
-    appearance: textfield;
-} */
   
 input,
 label {
@@ -116,20 +112,14 @@ input:focus {
     outline: 2px solid var(--clr-strong-cyan);
 }
 
+input[data-invalid=true] {
+    outline: 2px solid red;
+}
+
 .input-label {
     padding-bottom: .5rem;
     display: flex;
 }
-
-/* .input-label span:nth-child(2) {
-    display: grid;
-    align-items: center;
-}
-
-.input-error {
-    color: red;
-    font-size: .65rem;
-} */
 
 .bill-amount-input,
 .number-of-people-input {
@@ -146,10 +136,6 @@ input:focus {
     font-size: 1.35rem;
     text-align: right;
     color: var(--clr-very-dark-cyan);
-}
-
-.number-of-people-input[data-invalid=true] {
-    outline: 2px solid red;
 }
 
 .bill-amount-input {
@@ -235,7 +221,7 @@ MEDIA QUERIES
         gap: 2rem;
         flex-direction: row;
         justify-content: space-between;
-        min-width: 60%;
+        max-width: 70%;
         padding: 3rem 2rem;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
@@ -259,6 +245,14 @@ MEDIA QUERIES
     .tip-per-person-result,
     .tip-total-result {
         font-size: 3rem;
+    }
+
+}
+
+@media (min-width: 1600px) {
+
+    .form {
+        max-width: 50%;
     }
 
 }

@@ -10,6 +10,8 @@ const resetBtn = document.querySelector('.reset-btn')
 const tipPerPersonResultEl = document.querySelector('.tip-per-person-result');
 const tipTotalResultEl = document.querySelector('.tip-total-result');
 
+document.querySelector('#five-percent').checked = true;
+
 function getCheckedTipPercentage() {
     if (customPercentageInput.value === "") {
         return document.querySelector('.tip-percentage-input:checked').dataset['percentage'];
@@ -54,13 +56,13 @@ function validateInput(e) {
 
 function renderResult() {
 
-    document.querySelector('.tip-percentage-input:checked').style.backgroundColor = "var(--clr-strong-cyan)"
-
     const billAmount = Number(billAmountInput.value);
     const tipPercentage = Number(getCheckedTipPercentage());
     const numberOfPeople = Number(numberOfPeopleInput.value);
 
-    if (billAmount === 0) {
+    console.log(billAmount)
+
+    if (billAmount === 0 || billAmount === "0") {
         billAmountInput.dataset.invalid = true;
     } else {
         billAmountInput.dataset.invalid = false;
@@ -70,13 +72,15 @@ function renderResult() {
     const tipTotal = Number(((billAmount / numberOfPeople) + tipPerPerson).toFixed(2));
     // const tipTotal = Number((tipPerPerson * numberOfPeople).toFixed(2))
 
-    if ( billAmount === 0 || tipPercentage === 0 || numberOfPeople === 0) {
+    if (billAmount === 0 || tipPercentage === 0 || numberOfPeople === 0) {
         tipPerPersonResultEl.textContent = `$0.00`;
         tipTotalResultEl.textContent = `$0.00`;
     } else {
         tipPerPersonResultEl.textContent = `$${tipPerPerson}`;
         tipTotalResultEl.textContent = `$${tipTotal}`;
     }
+
+    document.querySelector('.tip-percentage-input:checked').style.backgroundColor = "var(--clr-strong-cyan)"
 }
 
 resetBtn.addEventListener('click', resetForm)

@@ -23,7 +23,7 @@
                 <label class="input-label" for="bill-amount">Bill</label>
                 <input 
                 type="text" name="bill-amount" id="bill-amount" class="app-number-input bill-amount-input"
-                pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;">
+                pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;" data-invalid="false">
             </div>
 
             <div class="form-row">
@@ -31,28 +31,28 @@
 
                 <div class="percentage-inputs-wrapper">
                     <div>
-                        <label class="tip-percentage-label" for="5-percent">5%</label>
-                        <input type="radio" name="tip-percentage" data-percentage="0.05" id="5-percent" class="tip-percentage-input">
+                        <label class="tip-percentage-label" for="five-percent">5%</label>
+                        <input type="radio" name="tip-percentage" data-percentage="0.05" id="five-percent" class="tip-percentage-input" autocomplete="off">
                     </div>
         
                     <div>
-                        <label class="tip-percentage-label" for="10-percent">10%</label>
-                        <input type="radio" name="tip-percentage" data-percentage="0.10"  id="10-percent" class="tip-percentage-input">
+                        <label class="tip-percentage-label" for="ten-percent">10%</label>
+                        <input type="radio" name="tip-percentage" data-percentage="0.10"  id="ten-percent" class="tip-percentage-input" autocomplete="off">
                     </div>
         
                     <div>
-                        <label class="tip-percentage-label" for="15-percent">15%</label>
-                        <input type="radio" name="tip-percentage" data-percentage="0.15"  id="15-percent" class="tip-percentage-input">
+                        <label class="tip-percentage-label" for="fifteen-percent">15%</label>
+                        <input type="radio" name="tip-percentage" data-percentage="0.15"  id="fifteen-percent" class="tip-percentage-input" autocomplete="off">
                     </div>
         
                     <div>
-                        <label class="tip-percentage-label" for="25-percent">25%</label>
-                        <input type="radio" name="tip-percentage" data-percentage="0.25"  id="25-percent" class="tip-percentage-input">
+                        <label class="tip-percentage-label" for="twentyfive-percent">25%</label>
+                        <input type="radio" name="tip-percentage" data-percentage="0.25"  id="twentyfive-percent" class="tip-percentage-input" autocomplete="off">
                     </div>
         
                     <div>
-                        <label class="tip-percentage-label" for="50-percent">50%</label>
-                        <input type="radio" name="tip-percentage" data-percentage="0.50"  id="50-percent" class="tip-percentage-input">
+                        <label class="tip-percentage-label" for="fifty-percent">50%</label>
+                        <input type="radio" name="tip-percentage" data-percentage="0.50"  id="fifty-percent" class="tip-percentage-input" autocomplete="off">
                     </div>
         
                     <div>
@@ -104,6 +104,6 @@
 
         </main>
     </div>
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
 </body>
 </html>
