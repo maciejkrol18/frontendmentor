@@ -83,13 +83,16 @@ LAYOUT
 ================== */
 
 .page-header,
-.cards-wrapper,
 .cards-wrapper-middle-col {
     width: 100%;
 }
 
 .page-header {
     padding-bottom: 2.5rem;
+}
+
+.cards-wrapper {
+    max-width: 85%;
 }
 
 .cards-wrapper,
