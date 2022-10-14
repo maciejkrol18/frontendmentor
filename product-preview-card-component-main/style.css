@@ -143,7 +143,6 @@ MEDIA QUERIES
     .card {
         flex-direction: row;
         width: clamp(450px, 80%, 700px);
-        align-items: stretch;
     }
 
     .col {
