@@ -76,6 +76,7 @@ TYPOGRAPHY
 
 .card-description {
     color: var(--clr-grayish-blue);
+    font-size: .9rem;
 }
 
 /* ===============
