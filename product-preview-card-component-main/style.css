@@ -67,6 +67,7 @@ h1 {
 
 .product-original-price {
     color: var(--clr-dark-grayish-blue);
+    text-decoration: line-through;
     font-size: .9rem;
 }
 
