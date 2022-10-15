@@ -51,7 +51,7 @@ h1 {
     color: var(--clr-dark-grayish-blue);
 }
 
-.product-heading {
+.product-title {
     color: var(--clr-very-dark-blue);
     line-height: 1;
     font-size: clamp(2rem, 3.5vw, 3rem);
@@ -61,11 +61,11 @@ h1 {
     color: var(--clr-dark-grayish-blue);
 }
 
-.product-current-price {
+.product-price-current {
     color: var(--clr-dark-cyan);
 }
 
-.product-original-price {
+.product-price-original {
     color: var(--clr-dark-grayish-blue);
     text-decoration: line-through;
     font-size: .9rem;
@@ -106,7 +106,7 @@ LAYOUT
     border-bottom-right-radius: 15px;
 }
 
-.product-meta {
+.product-price {
     display: flex;
     align-items: center;
     gap: 1.5rem;
