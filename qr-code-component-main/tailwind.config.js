@@ -12,6 +12,9 @@ module.exports = {
         fontFamily: {
             // style-guide.md
             'outfit': ['Outfit', 'Helvetica', 'sans-serif']
+        },
+        dropShadow: {
+            'xs': '0px 0px 7px rgba(0, 0, 0, 0.15)'
         }
     },
   },
