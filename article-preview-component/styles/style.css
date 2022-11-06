@@ -107,7 +107,6 @@ LAYOUT
 }
 
 .share-menu {
-  display: none;
   align-items: center;
   padding-inline: 2rem;
   gap: 1rem;
