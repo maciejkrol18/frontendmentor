@@ -1,0 +1,216 @@
+@import url('https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css');
+
+/* ===============
+VARIABLES
+================== */
+
+$clr-very-dark-blue: hsl(217, 19%, 35%);
+$clr-desaturated-dark-blue: hsl(214, 17%, 51%);
+$clr-grayish-blue: hsl(212, 23%, 69%);
+$clr-light-grayish-blue: hsl(210, 46%, 95%);
+
+$fnt-primary: 'Manrope', 'Helvetica', sans-serif;
+
+$card-border-radius: 15px;
+
+/* ===============
+GENERAL
+================== */
+
+body {
+    font-family: $fnt-primary;
+}
+
+.root {
+    min-height: 100vh;
+    background-color: $clr-light-grayish-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: .75rem;
+    padding-block: 3rem;
+}
+
+/* ===============
+TYPOGRAPHY
+================== */
+
+// card
+
+.card-content {
+
+    .article-title {
+        font-size: 1.25rem;
+        color: $clr-very-dark-blue;
+        margin-block-end: 1rem;
+        font-weight: 700;
+    }
+
+    .article-summary {
+        font-size: .9rem;
+        color: $clr-very-dark-blue;
+        margin-block-end: 2.5rem;
+    }
+
+}
+
+.card-content__footer {
+
+    .article-author-name {
+        font-size: .9rem;
+        color: $clr-very-dark-blue;
+        font-weight: 700;
+    }
+
+    .article-date {
+        font-size: .8rem;
+        color: $clr-grayish-blue;
+    }
+
+}
+
+/* ===============
+LAYOUT
+================== */
+
+// card
+
+.card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 23rem;
+    border-radius: $card-border-radius;
+    box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
+}
+
+.card-image {
+    background-image: url(../images/drawers.jpg);
+    background-size: cover;
+    background-position: center top;
+    min-height: 12.5rem;
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+}
+
+.card-description {
+    padding-block-start: 2rem;
+    padding-inline: 1rem;
+}
+
+.card-content__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+}
+
+.article-author-picture {
+    max-width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+
+.article-author-metadata {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 100%;
+    min-width: 2rem;
+    max-height: 2rem;
+    aspect-ratio: 1;
+    z-index: 999;
+    color: $clr-desaturated-dark-blue;
+}
+
+.share-menu {
+    // Hidden by default
+    display: none;
+    align-items: center;
+    padding-inline: 2rem;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $clr-very-dark-blue;
+    color: $clr-light-grayish-blue;
+    padding-block: 1rem;
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+
+    p {
+        color: $clr-grayish-blue;
+        text-transform: uppercase;
+        letter-spacing: .25em;
+    }
+
+    i {
+        color: #fff;
+    }
+}
+
+// left: 50%;
+// transform: translateX(-50%);
+// top: -2rem;
+
+/* ===============
+MEDIA QUERIES
+================== */
+
+@media (min-width: 1280px) {
+
+    .card {
+        flex-direction: row;
+        max-width: 50rem;
+    }
+
+    .card-image {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: $card-border-radius;
+        flex: 1;
+    }
+
+    .card-content {
+        flex: 1.6;
+    }
+
+    .card-description {
+        padding-inline: 3rem;
+    }
+
+    .card-content__footer {
+        padding-inline: 3rem;
+    }
+
+    .share-menu {
+        height: auto;
+        justify-content: center;
+        left: 54.4%;
+        top: -4rem;
+        bottom: auto;
+        width: 20rem;
+        border-radius: $card-border-radius;
+    }
+
+    .share-menu::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        border-top: 10px $clr-very-dark-blue solid;
+        border-left: 10px transparent solid;
+        border-right: 10px transparent solid;
+    }
+
+}
