@@ -9,7 +9,7 @@ body {
   font-family: "Manrope", "Helvetica", sans-serif;
 }
 
-.root {
+.webpage-container {
   min-height: 100vh;
   background-color: hsl(210deg, 46%, 95%);
   display: flex;

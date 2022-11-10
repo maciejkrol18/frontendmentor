@@ -20,7 +20,7 @@ body {
     background-color: var(--clr-dark_blue);
 }
 
-.root {
+.webpage-container {
     display: flex;
     align-items: center;
     justify-content: center;
