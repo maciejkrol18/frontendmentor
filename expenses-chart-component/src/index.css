@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: var(--clr-neutral-pale-orange);*/
-  background-color: bisque;
+  background-color: var(--clr-neutral-pale-orange);
+  overflow: hidden;
   font-family: var(--font);
 }
